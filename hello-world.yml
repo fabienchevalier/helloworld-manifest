@@ -16,7 +16,7 @@ spec:
         - name: docker-nginx-hello-world
           image: dockerbogo/docker-nginx-hello-world
           ports:
-            - containerPort: 3000
+            - containerPort: 80
 
 ---
 
@@ -29,6 +29,6 @@ spec:
     app: docker-nginx-hello-world
   ports:
     - protocol: TCP
-      port: 3000
+      port: 80
       targetPort: 80
   type: LoadBalancer
